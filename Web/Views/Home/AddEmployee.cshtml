@@ -1,0 +1,119 @@
+﻿   <script type="text/javascript">
+        jQuery(document).ready(function () {
+            // Initialise the table
+            //alert("Hi");
+            $("#EmployeeTableSample").tableDnD();
+            $("#EmployeeTable").tableDnD();
+            $("#EmployeeTable").mouseover(function () {
+                //$("p").css("background-color", "yellow");
+                //alert("Hi");
+                $("#EmployeeTable").removeClass("ng-scope");
+            });
+        });
+    </script>
+
+<div style="width: 50%; margin: 50px auto;">
+
+    <table id="EmployeeDetails">
+        <tr>
+            <td>
+                <strong>Employee Name:</strong>
+            </td>
+            <td>
+                <input type="text" class="form-control" ng-model="EmpDetailsModel.EmpName" placeholder="Employee Name" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <strong>Employee Phone:</strong>
+
+            </td>
+            <td>
+                <input type="text" class="form-control" ng-model="EmpDetailsModel.EmpPhone" placeholder="Employee Phone" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <strong>Address 1:</strong>
+
+            </td>
+            <td>
+                <input type="text" class="form-control" ng-model="EmpAddressModel.Address1" placeholder="Address 1" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <strong>Address 2:</strong>
+
+            </td>
+            <td>
+                <input type="text" class="form-control" ng-model="EmpAddressModel.Address2" placeholder="Address 2" />
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <strong>Address 3:</strong>
+
+            </td>
+            <td>
+                <input type="text" class="form-control" ng-model="EmpAddressModel.Address3" placeholder="Address 3" />
+            </td>
+        </tr>
+        <br />
+        <tr>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;
+            </td>
+            <td>
+                <button type="button" ng-click="AddEmployee();" class="btn btn-primary">Save</button>
+            </td>
+        </tr>
+
+    </table>
+</div>
+
+<hr style="color: black" />
+
+<div style="width: 50%; margin: 50px auto;">
+    <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading"><b>Employee Details </b></div>
+        <div class="table-responsive">
+            <table id="EmployeeTable" class="table table-striped table-bordered table-hover table-condensed">
+                <thead>
+                    <tr>
+                        <th>Employee Name</th>
+                        <th>Employee Phone</th>
+                        <th>Employee Address1</th>
+                        <th>Employee Address2</th>
+                        <th>Employee Address3</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-ng-repeat="Emp in EmpAddressList">
+
+                        <td>{{Emp.empDetailModel.EmpName}}</td>
+                        <td>{{Emp.empDetailModel.EmpPhone}}</td>
+                        <td>{{Emp.empAddressModel.Address1}}</td>
+                        <td>{{Emp.empAddressModel.Address2}}</td>
+                        <td>{{Emp.empAddressModel.Address3}}</td>
+
+                    </tr>
+
+                    @*<tr ng-if="states.NewRow">*@
+                    <tr ng-if="EmpAddressList.length == 0">
+                        <td class="text-center" colspan="4">There are no Employee details to display
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+    @*<div class="col-sm-10">
+        <button type="button" id="AddRows" ng-click="ShowRow($event);" class="btn btn-primary">Add Bill</button>
+        <button type="button" ng-click="AddNew();" class="btn btn-primary">Save</button>
+    </div>*@
+</div>
+
+<hr />

@@ -1,0 +1,10 @@
+C:\Repos\Código\AeC.Operacao.TelevendasADM\Comum\bin\Teste\Comum.dll
+C:\Repos\Código\AeC.Operacao.TelevendasADM\Comum\bin\Teste\Comum.pdb
+C:\Repos\Código\AeC.Operacao.TelevendasADM\Comum\bin\Teste\Iesi.Collections.dll
+C:\Repos\Código\AeC.Operacao.TelevendasADM\Comum\bin\Teste\Iesi.Collections.xml
+C:\Repos\Código\AeC.Operacao.TelevendasADM\Comum\obj\Teste\Comum.csprojResolveAssemblyReference.cache
+C:\Repos\Código\AeC.Operacao.TelevendasADM\Comum\obj\Teste\Comum.Recursos.MensagensValidacao.resources
+C:\Repos\Código\AeC.Operacao.TelevendasADM\Comum\obj\Teste\Comum.Recursos.TextoGeral.resources
+C:\Repos\Código\AeC.Operacao.TelevendasADM\Comum\obj\Teste\Comum.csproj.GenerateResource.Cache
+C:\Repos\Código\AeC.Operacao.TelevendasADM\Comum\obj\Teste\Comum.dll
+C:\Repos\Código\AeC.Operacao.TelevendasADM\Comum\obj\Teste\Comum.pdb

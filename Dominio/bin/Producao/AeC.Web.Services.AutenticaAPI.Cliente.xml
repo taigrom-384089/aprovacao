@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AeC.Web.Services.AutenticaAPI.Cliente</name>
+    </assembly>
+    <members>
+        <member name="M:AeC.Web.Services.AutenticaAPI.Cliente.AutenticaAPI.#ctor">
+            <summary>
+            Cliente do AutenticaAPI.
+            Lê as configurações do arquivo App.config/Web.config.
+            </summary>
+        </member>
+        <member name="M:AeC.Web.Services.AutenticaAPI.Cliente.AutenticaAPI.#ctor(System.Guid,System.String,System.String,System.Int32,System.Int32,System.String)">
+            <summary>
+            Cliente do AutenticaAPI.
+            </summary>
+            <param name="chave">Chave do Autorização de Web Services</param>
+            <param name="host">Hostname enviado no cabeçalho Hosta</param>
+            <param name="activeDirectory">Domínio do Active Directory a ser utilizado</param>
+            <param name="coligada">Coligada a ser utilizada</param>
+            <param name="timeout">Timeout a ser utilizado</param>
+            <param name="url">
+            Bases de URL a serem utilizadas (se for vazia é buscado os IPs do host passado)
+            </param>
+        </member>
+    </members>
+</doc>
