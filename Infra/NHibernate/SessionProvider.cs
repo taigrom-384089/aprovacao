@@ -52,7 +52,7 @@ namespace Infra.NHibernate
         public static Configuration CreateConfiguration()
         {
             return Fluently.Configure()
-                .Database(MsSqlConfiguration.MsSql2008.ConnectionString(ConnString).ShowSql)
+                .Database(MsSqlConfiguration.MsSql2012.ConnectionString(ConnString).ShowSql)
                 //   .ProxyFactoryFactory<ProxyFactoryFactory>()
                 .Mappings(m =>
                 {

@@ -18,7 +18,7 @@ namespace Infra.Persistencia.Mapeamento
             Map(x => x.Senha).Column("SENHA").Length(8).Not.Nullable();
             Map(x => x.Papel).Column("PAPEL").Not.Nullable();
             Map(x => x.ValorMinVistoAprovacao).Column("VALOR_MIN_VISTO_APROVACAO").Length(18).Not.Nullable();
-            Map(x => x.ValorMinVistoAprovacao).Column("VALOR_MAX_VISTO_APROVACAO").Length(18).Not.Nullable();
+            Map(x => x.ValorMaxVistoAprovacao).Column("VALOR_MAX_VISTO_APROVACAO").Length(18).Not.Nullable();
         }
     }
 }
