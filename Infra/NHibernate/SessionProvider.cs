@@ -18,7 +18,7 @@ namespace Infra.NHibernate
     {
         private static ISessionFactory sessionFactory;
 
-        private static readonly string ConnString = ConfigurationManager.ConnectionStrings["Minu"].ConnectionString;
+        private static readonly string ConnString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
 
         private static ISessionManager _sessionManager;
 

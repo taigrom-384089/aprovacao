@@ -82,25 +82,11 @@
   <ItemGroup>
     <Compile Include="Entidade\Acesso\Usuario.cs" />
     <Compile Include="Entidade\IEntidade.cs" />
-    <Compile Include="Entidade\Utilitarios\MensagemErro.cs" />
-    <Compile Include="Entidade\Endereco\Estado.cs" />
-    <Compile Include="Entidade\Endereco\Cidade.cs" />
-    <Compile Include="Entidade\Endereco\Bairro.cs" />
-    <Compile Include="Entidade\Endereco\Logradouro.cs" />
-    <Compile Include="Entidade\Endereco\Cep.cs" />
-    <Compile Include="Entidade\Endereco\Endereco.cs" />
-    <Compile Include="Entidade\Endereco\Telefone.cs" />
-    <Compile Include="Entidade\Acesso\Cliente.cs" />
     <Compile Include="InjecaoDependencia\Entidade\ResolvedorDependencia.cs" />
     <Compile Include="InjecaoDependencia\Interfaces\IResolvedorDependencia.cs" />
     <Compile Include="Integracao\Interfaces\IServicoLog.cs" />
     <Compile Include="Persistencia\Entidade\Repositorio.cs" />
-    <Compile Include="Persistencia\Interfaces\IRepositorioTelefone.cs" />
-    <Compile Include="Persistencia\Interfaces\IRepositorioCep.cs" />
-    <Compile Include="Persistencia\Interfaces\IRepositorioEstado.cs" />
-    <Compile Include="Persistencia\Interfaces\IRepositorioCidade.cs" />
-    <Compile Include="Persistencia\Interfaces\IRepositorioBairro.cs" />
-    <Compile Include="Persistencia\Interfaces\IRepositorioCliente.cs" />
+    <Compile Include="Persistencia\Interfaces\IRepositorioUsuario.cs" />
     <Compile Include="Persistencia\Interfaces\IRepositorioBase.cs" />
     <Compile Include="Persistencia\Interfaces\ITransacao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

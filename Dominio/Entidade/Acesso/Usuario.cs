@@ -18,5 +18,11 @@ namespace Dominio.Entidade
         public virtual string Login { get; set; }
 
         public virtual string Senha { get; set; }
+
+        public virtual bool Papel { get; set; }
+
+        public virtual double ValorMinVistoAprovacao { get; set; }
+
+        public virtual double ValorMaxVistoAprovacao { get; set; }
     }
 }

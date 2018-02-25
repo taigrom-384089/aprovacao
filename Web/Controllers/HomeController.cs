@@ -8,6 +8,7 @@ using Web.ViewModels;
 using System.Data.SqlClient;
 using System.Configuration;
 using System.Data;
+using Dominio.Persistencia.Entidade;
 
 namespace Web.Controllers
 {
@@ -15,6 +16,8 @@ namespace Web.Controllers
     {
         public ActionResult Index()
         {
+            var usuario = Repositorio.Usuarios.BuscarTodos();
+
             return View();
         }
 
