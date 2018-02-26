@@ -24,6 +24,9 @@ namespace Web
                 {
                     container.RegisterType(typeof(IServicoLog), typeof(ServicoLog));
                     container.RegisterType<IRepositorioUsuario, RepositorioUsuario>();
+                    container.RegisterType<IRepositorioHistoricoAprovacao, RepositorioHistoricoAprovacao>();
+                    container.RegisterType<IRepositorioNotaCompra, RepositorioNotaCompra>();
+                    container.RegisterType<IRepositorioConfiguracao, RepositorioConfiguracao>();
                     container.RegisterType<ISessionManager, SessionManager>();
                     container.RegisterType<ITransacao, Transacao>();
                 });
@@ -33,6 +36,7 @@ namespace Web
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
+
 
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);

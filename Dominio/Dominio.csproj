@@ -80,12 +80,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entidade\Acesso\Usuario.cs" />
+    <Compile Include="Entidade\HistoricoAprovacao.cs" />
+    <Compile Include="Entidade\Configuracao.cs" />
+    <Compile Include="Entidade\NotaCompra.cs" />
+    <Compile Include="Entidade\Usuario.cs" />
     <Compile Include="Entidade\IEntidade.cs" />
     <Compile Include="InjecaoDependencia\Entidade\ResolvedorDependencia.cs" />
     <Compile Include="InjecaoDependencia\Interfaces\IResolvedorDependencia.cs" />
     <Compile Include="Integracao\Interfaces\IServicoLog.cs" />
     <Compile Include="Persistencia\Entidade\Repositorio.cs" />
+    <Compile Include="Persistencia\Interfaces\IRepositorioHistoricoAprovacao.cs" />
+    <Compile Include="Persistencia\Interfaces\IRepositorioConfiguracao.cs" />
+    <Compile Include="Persistencia\Interfaces\IRepositorioNotaCompra.cs" />
     <Compile Include="Persistencia\Interfaces\IRepositorioUsuario.cs" />
     <Compile Include="Persistencia\Interfaces\IRepositorioBase.cs" />
     <Compile Include="Persistencia\Interfaces\ITransacao.cs" />

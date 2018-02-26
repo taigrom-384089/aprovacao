@@ -12,6 +12,30 @@ namespace Dominio.Persistencia.Entidade
                 return ResolvedorDependencia.Instancia.Resolver<IRepositorioUsuario>();
             }
         }
+
+        public static IRepositorioNotaCompra NotasCompra
+        {
+            get
+            {
+                return ResolvedorDependencia.Instancia.Resolver<IRepositorioNotaCompra>();
+            }
+        }
+
+        public static IRepositorioHistoricoAprovacao Historicos
+        {
+            get
+            {
+                return ResolvedorDependencia.Instancia.Resolver<IRepositorioHistoricoAprovacao>();
+            }
+        }
+
+        public static IRepositorioConfiguracao Configuracoes
+        {
+            get
+            {
+                return ResolvedorDependencia.Instancia.Resolver<IRepositorioConfiguracao>();
+            }
+        }
              
         public static ITransacao Transacao
         {

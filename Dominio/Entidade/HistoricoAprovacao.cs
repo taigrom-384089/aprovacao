@@ -11,18 +11,16 @@ using System.Threading.Tasks;
 
 namespace Dominio.Entidade
 {
-    public class Usuario 
+    public class HistoricoAprovacao 
     {
         public virtual Int32 Id { get; set; }
 
-        public virtual string Login { get; set; }
+        public virtual Usuario Usuario { get; set; }
 
-        public virtual string Senha { get; set; }
+        public virtual NotaCompra NotaCompra { get; set; }
 
-        public virtual bool Papel { get; set; }
+        public virtual int Operacao { get; set; }
 
-        public virtual double ValorMinVistoAprovacao { get; set; }
-
-        public virtual double ValorMaxVistoAprovacao { get; set; }
+        public virtual DateTime Data { get; set; }
     }
 }

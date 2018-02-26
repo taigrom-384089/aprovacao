@@ -12,7 +12,7 @@ namespace Infra.Persistencia.Mapeamento
     {
         UsuarioMap()
         {
-            Table("TB_USUARO");
+            Table("TB_USUARIO");
             Id(x => x.Id).Column("ID_USUARIO").GeneratedBy.Identity();
             Map(x => x.Login).Column("LOGIN").Length(20).Not.Nullable();
             Map(x => x.Senha).Column("SENHA").Length(8).Not.Nullable();

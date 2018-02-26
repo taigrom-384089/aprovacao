@@ -85,7 +85,13 @@
     <Compile Include="NHibernate\LikeCollationExpression.cs" />
     <Compile Include="NHibernate\QueryOverExtentions.cs" />
     <Compile Include="NHibernate\SessionManager.cs" />
+    <Compile Include="Persistencia\Mapeamento\HistoricoAprovacaoMap.cs" />
+    <Compile Include="Persistencia\Mapeamento\ConfiguracaoMap.cs" />
+    <Compile Include="Persistencia\Mapeamento\NotaCompraMap.cs" />
     <Compile Include="Persistencia\Mapeamento\UsuarioMap.cs" />
+    <Compile Include="Persistencia\Persistencia\RepositorioHistoricoAprovacao.cs" />
+    <Compile Include="Persistencia\Persistencia\RepositorioConfiguracao.cs" />
+    <Compile Include="Persistencia\Persistencia\RepositorioNotaCompra.cs" />
     <Compile Include="Persistencia\Persistencia\RepositorioUsuario.cs" />
     <Compile Include="Persistencia\Persistencia\RespositorioBase.cs" />
     <Compile Include="Persistencia\Persistencia\Transacao.cs" />

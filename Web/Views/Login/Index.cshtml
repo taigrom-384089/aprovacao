@@ -1,0 +1,38 @@
+﻿
+
+<div style="width: 50%; margin: 50px auto;" ng-controller="LoginCtrl">
+
+    <table id="login">
+        <tr>
+            <td>
+                <strong>Login:</strong>
+            </td>
+            <td>
+                <input type="text" class="form-control" ng-model="usuarioViewModel.Login" placeholder="Login" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <strong>Senha:</strong>
+
+            </td>
+            <td>
+                <input type="password" class="form-control" ng-model="usuarioViewModel.Senha" placeholder="Senha" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+            </td>
+            <td>
+                <button type="button" ng-click="entrar();" class="btn btn-primary">Entrar</button>
+            </td>
+        </tr>
+
+    </table>
+</div>
+
+<hr style="color: black" />
+
+
+

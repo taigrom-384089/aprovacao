@@ -61,56 +61,29 @@ namespace Comum.Recursos {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cpf é inválido..
-        /// </summary>
-        public static string Cliente_CpfInvalido {
-            get {
-                return ResourceManager.GetString("Cliente_CpfInvalido", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Cpf é obrigatório..
-        /// </summary>
-        public static string Cliente_CpfObrigatorio {
-            get {
-                return ResourceManager.GetString("Cliente_CpfObrigatorio", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Email é obrigatório..
-        /// </summary>
-        public static string Cliente_EmailObrigatorio {
-            get {
-                return ResourceManager.GetString("Cliente_EmailObrigatorio", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Endereço é obrigatório..
-        /// </summary>
-        public static string Cliente_EnderecoObrigatorio {
-            get {
-                return ResourceManager.GetString("Cliente_EnderecoObrigatorio", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Telefone é obrigatório.
-        /// </summary>
-        public static string Cliente_TelefoneObrigatorio {
-            get {
-                return ResourceManager.GetString("Cliente_TelefoneObrigatorio", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Login ou senha inválidos..
         /// </summary>
         public static string Login_LoginOuSenhaInvalido {
             get {
                 return ResourceManager.GetString("Login_LoginOuSenhaInvalido", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Usuário já aprovou está nota de compra..
+        /// </summary>
+        public static string Usuario_JaAprovouNotaCompra {
+            get {
+                return ResourceManager.GetString("Usuario_JaAprovouNotaCompra", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Número de vistos necessários para aprovação não foi atingido..
+        /// </summary>
+        public static string Usuario_LimiteDeVistosNaoAtigidos {
+            get {
+                return ResourceManager.GetString("Usuario_LimiteDeVistosNaoAtigidos", resourceCulture);
             }
         }
     }

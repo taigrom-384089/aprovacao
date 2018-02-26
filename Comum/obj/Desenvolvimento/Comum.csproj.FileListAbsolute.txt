@@ -49,3 +49,13 @@ C:\Projetos\aprovacao\Comum\obj\Desenvolvimento\Comum.csproj.GenerateResource.Ca
 C:\Projetos\aprovacao\Comum\obj\Desenvolvimento\Comum.csproj.CoreCompileInputs.cache
 C:\Projetos\aprovacao\Comum\obj\Desenvolvimento\Comum.dll
 C:\Projetos\aprovacao\Comum\obj\Desenvolvimento\Comum.pdb
+C:\Taigrom\MicroUniverso\aprovacao\Comum\bin\Desenvolvimento\Comum.dll
+C:\Taigrom\MicroUniverso\aprovacao\Comum\bin\Desenvolvimento\Comum.pdb
+C:\Taigrom\MicroUniverso\aprovacao\Comum\bin\Desenvolvimento\Iesi.Collections.dll
+C:\Taigrom\MicroUniverso\aprovacao\Comum\bin\Desenvolvimento\Iesi.Collections.xml
+C:\Taigrom\MicroUniverso\aprovacao\Comum\obj\Desenvolvimento\Comum.csprojResolveAssemblyReference.cache
+C:\Taigrom\MicroUniverso\aprovacao\Comum\obj\Desenvolvimento\Comum.Recursos.MensagensValidacao.resources
+C:\Taigrom\MicroUniverso\aprovacao\Comum\obj\Desenvolvimento\Comum.Recursos.TextoGeral.resources
+C:\Taigrom\MicroUniverso\aprovacao\Comum\obj\Desenvolvimento\Comum.csproj.GenerateResource.Cache
+C:\Taigrom\MicroUniverso\aprovacao\Comum\obj\Desenvolvimento\Comum.dll
+C:\Taigrom\MicroUniverso\aprovacao\Comum\obj\Desenvolvimento\Comum.pdb

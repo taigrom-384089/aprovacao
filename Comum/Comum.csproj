@@ -69,6 +69,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TextoGeral.resx</DependentUpon>
     </Compile>
+    <Compile Include="Util\Constantes.cs" />
+    <Compile Include="Util\Enums.cs" />
     <Compile Include="Util\Helper.cs" />
   </ItemGroup>
   <ItemGroup>

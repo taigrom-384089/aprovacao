@@ -1,0 +1,99 @@
+﻿<script type="text/javascript">
+    jQuery(document).ready(function () {
+        $("#nota_compra_table").tableDnD();
+        $("#nota_compra_table").mouseover(function () {
+            $("#nota_compra_table").removeClass("ng-scope");
+        });
+    });
+</script>
+
+<div style="width: 50%; margin: 50px auto;" ng-controller="NotaCompraCtrl">
+
+    <h3>Filtrar</h3>
+    <table id="nota_compra_filtrar">
+        <tr>
+            <td>
+                <strong>Data Inicial:</strong>
+            </td>
+            <td>
+                <input type="text" class="form-control" ng-model="NotaCompraModel.DataInicial" placeholder="Data Inicial" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <strong>Data Final:</strong>
+
+            </td>
+            <td>
+                <input type="text" class="form-control" ng-model="NotaCompraModel.DataFinal" placeholder="Data Final" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+            </td>
+            <td>
+                <button type="button" ng-click="filtrar();" class="btn btn-primary">Save</button>
+            </td>
+        </tr>
+
+    </table>
+</div>
+
+<hr style="color: black" />
+
+<div style="width: 50%; margin: 50px auto;">
+    <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading"><b>{{NotasCompraTitle}}</b></div>
+        <div class="table-responsive">
+            <table id="nota_compra_table" class="table table-striped table-bordered table-hover table-condensed">
+                <thead>
+                    <tr>
+                        <th>{{DataEmissao}}</th>
+                        <th>{{ValorMercadoria}}</th>
+                        <th>{{ValorDesconto}}</th>
+                        <th>{{ValorFrete}}</th>
+                        <th>{{ValorTotal}}</th>
+                        <th>{{Status}}</th>
+                        <th>{{Visto}}</th>
+                        <th>{{Aprovacao}}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-ng-repeat="Nota in NotasCompra">
+
+                        <td>{{Nota.DataEmissao}}</td>
+                        <td>{{Nota.ValorMercadoria}}</td>
+                        <td>{{Nota.ValorDesconto}}</td>
+                        <td>{{Nota.ValorFrete}}</td>
+                        <td>{{Nota.ValorTotal}}</td>
+                        <td>{{Nota.Status}}</td>
+                        <td>
+                            <button ng-click='visto(Nota.Id);' data-toggle='tooltip' title='{{Visto}}' class='btn btn-xs btn-primary'>
+                                <i class='glyphicon glyphicon-ok' style='color:white;'></i>
+                            </button>
+                        </td>
+                        <td>
+                            <button ng-click='aprovacao();' data-toggle='tooltip' title='{{Aprovacao}}' class='btn btn-xs btn btn-xs btn-success'>
+                                <i class='glyphicon glyphicon-ok' style='color:white;'></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr ng-if="NotasCompra.length == 0">
+                        <td class="text-center" colspan="8">
+                            {{NenhumRegistro}}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+    @*<div class="col-sm-10">
+            <button type="button" id="AddRows" ng-click="ShowRow($event);" class="btn btn-primary">Add Bill</button>
+            <button type="button" ng-click="AddNew();" class="btn btn-primary">Save</button>
+        </div>*@
+</div>
+
+<hr />

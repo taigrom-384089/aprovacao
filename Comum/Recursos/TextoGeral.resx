@@ -117,4 +117,49 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Aprovacao" xml:space="preserve">
+    <value>Aprovação</value>
+  </data>
+  <data name="Atencao" xml:space="preserve">
+    <value>Atenção</value>
+  </data>
+  <data name="DataEmissao" xml:space="preserve">
+    <value>Data Emissão</value>
+  </data>
+  <data name="DesejaEfetuarAprovacao" xml:space="preserve">
+    <value>Deseja efetuar aprovação?</value>
+  </data>
+  <data name="DesejaEfetuarVisto" xml:space="preserve">
+    <value>Deseja efetuar visto?</value>
+  </data>
+  <data name="Nao" xml:space="preserve">
+    <value>Não</value>
+  </data>
+  <data name="NenhumRegistro" xml:space="preserve">
+    <value>Nenhum registro(s) foi(ram) encontrados.</value>
+  </data>
+  <data name="NotasCompra" xml:space="preserve">
+    <value>Notas de Compra</value>
+  </data>
+  <data name="Sim" xml:space="preserve">
+    <value>Sim</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="ValorDesconto" xml:space="preserve">
+    <value>Valor do Desconto</value>
+  </data>
+  <data name="ValorFrete" xml:space="preserve">
+    <value>Valor do Frete</value>
+  </data>
+  <data name="ValorMercadoria" xml:space="preserve">
+    <value>Valor da Mercadoria</value>
+  </data>
+  <data name="ValorTotal" xml:space="preserve">
+    <value>Valor Total</value>
+  </data>
+  <data name="Visto" xml:space="preserve">
+    <value>Visto</value>
+  </data>
 </root>

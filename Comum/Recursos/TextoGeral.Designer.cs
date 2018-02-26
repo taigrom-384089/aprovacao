@@ -59,5 +59,140 @@ namespace Comum.Recursos {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Aprovação.
+        /// </summary>
+        public static string Aprovacao {
+            get {
+                return ResourceManager.GetString("Aprovacao", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Atenção.
+        /// </summary>
+        public static string Atencao {
+            get {
+                return ResourceManager.GetString("Atencao", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Data Emissão.
+        /// </summary>
+        public static string DataEmissao {
+            get {
+                return ResourceManager.GetString("DataEmissao", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deseja efetuar aprovação?.
+        /// </summary>
+        public static string DesejaEfetuarAprovacao {
+            get {
+                return ResourceManager.GetString("DesejaEfetuarAprovacao", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deseja efetuar visto?.
+        /// </summary>
+        public static string DesejaEfetuarVisto {
+            get {
+                return ResourceManager.GetString("DesejaEfetuarVisto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Não.
+        /// </summary>
+        public static string Nao {
+            get {
+                return ResourceManager.GetString("Nao", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nenhum registro(s) foi(ram) encontrados..
+        /// </summary>
+        public static string NenhumRegistro {
+            get {
+                return ResourceManager.GetString("NenhumRegistro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Notas de Compra.
+        /// </summary>
+        public static string NotasCompra {
+            get {
+                return ResourceManager.GetString("NotasCompra", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sim.
+        /// </summary>
+        public static string Sim {
+            get {
+                return ResourceManager.GetString("Sim", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Status.
+        /// </summary>
+        public static string Status {
+            get {
+                return ResourceManager.GetString("Status", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Valor do Desconto.
+        /// </summary>
+        public static string ValorDesconto {
+            get {
+                return ResourceManager.GetString("ValorDesconto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Valor do Frete.
+        /// </summary>
+        public static string ValorFrete {
+            get {
+                return ResourceManager.GetString("ValorFrete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Valor da Mercadoria.
+        /// </summary>
+        public static string ValorMercadoria {
+            get {
+                return ResourceManager.GetString("ValorMercadoria", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Valor Total.
+        /// </summary>
+        public static string ValorTotal {
+            get {
+                return ResourceManager.GetString("ValorTotal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Visto.
+        /// </summary>
+        public static string Visto {
+            get {
+                return ResourceManager.GetString("Visto", resourceCulture);
+            }
+        }
     }
 }
