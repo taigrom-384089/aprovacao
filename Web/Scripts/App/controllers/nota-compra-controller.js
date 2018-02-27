@@ -94,7 +94,7 @@ angular.module('Module.NotaCompra', ['ngRoute'])
     $scope.aprovacao = function (idNotaCompra) {
         var optionsDefault = {
             title: i18n.textogeral.Atencao,
-            message: i18n.textogeral.DesejaEfetuarVisto,
+            message: i18n.textogeral.DesejaEfetuarAprovacao,
             size: 'small',
             buttons: {
                 success: {

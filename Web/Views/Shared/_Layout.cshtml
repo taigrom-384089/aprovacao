@@ -20,6 +20,7 @@
     @Scripts.Render("~/bundles/angular")
     @Scripts.Render("~/Scripts/App/controllers/menu-controller.js")
     @Scripts.Render("~/Scripts/App/controllers/nota-compra-controller.js")
+    @Scripts.Render("~/Scripts/App/controllers/historico-aprovacao-controller.js")
     @Scripts.Render("~/Scripts/App/controllers/login-controller.js")
     @Scripts.Render("~/Scripts/App/services/routes-service.js")
     @Scripts.Render("~/Scripts/App/services/erro-servidor-service.js")
@@ -45,9 +46,9 @@
                     @if (Web.Auth.Sessao.Ativa != null)
                     {
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href="/">Nota de Compra</a></li>
+                            <li ><a href="/">Nota de Compra</a></li>
                         </ul>
-
+                        
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href="#" ng-click="sair();">@string.Format("{0} | Sair", Web.Auth.Sessao.Ativa.Usuario.Login)</a></li>
                         </ul>
