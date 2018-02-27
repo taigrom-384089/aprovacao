@@ -18,6 +18,7 @@
 
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/angular")
+    @Scripts.Render("~/Scripts/App/controllers/menu-controller.js")
     @Scripts.Render("~/Scripts/App/controllers/nota-compra-controller.js")
     @Scripts.Render("~/Scripts/App/controllers/login-controller.js")
     @Scripts.Render("~/Scripts/App/services/routes-service.js")
@@ -29,7 +30,7 @@
 </head>
 <body >
     <header>
-        <nav class="navbar navbar-default navbar-static-top" >
+        <nav class="navbar navbar-default navbar-static-top" ng-controller="MenuCtrl">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -41,16 +42,17 @@
                     <a class="navbar-brand" href="#" style="color: white;">Aprovação</a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
-                    @if(Web.Auth.Sessao.Ativa != null)
+                    @if (Web.Auth.Sessao.Ativa != null)
                     {
                         <ul class="nav navbar-nav">
                             <li class="active"><a href="/">Nota de Compra</a></li>
                         </ul>
+
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="/Login/Sair">Sair</a></li>
+                            <li><a href="#" ng-click="sair();">@string.Format("{0} | Sair", Web.Auth.Sessao.Ativa.Usuario.Login)</a></li>
                         </ul>
                     }
-                    
+
                 </div>
                 <!--/.nav-collapse -->
             </div>

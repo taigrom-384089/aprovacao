@@ -1,5 +1,6 @@
 ﻿var App = angular.module('App', ['Module.Login',
-                       'Module.NotaCompra'
+                       'Module.NotaCompra',
+                       'Module.Menu'
 ])
 
 .config(['$routeProvider', '$locationProvider', '$httpProvider', function ($routeProvider, $locationProvider, $httpProvider) {

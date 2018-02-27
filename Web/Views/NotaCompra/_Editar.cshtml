@@ -4,10 +4,13 @@
         $("#nota_compra_table").mouseover(function () {
             $("#nota_compra_table").removeClass("ng-scope");
         });
+
+        $('#DataInicial').mask('99/99/9999', { autoclear: 0 });
+        $('#DataFinal').mask('99/99/9999', {  autoclear: 0 });
     });
 </script>
 
-<div style="width: 50%; margin: 50px auto;" ng-controller="NotaCompraCtrl">
+<div style="width: 50%; margin: 50px auto;" >
 
     <h3>Filtrar</h3>
     <table id="nota_compra_filtrar">
@@ -16,7 +19,7 @@
                 <strong>Data Inicial:</strong>
             </td>
             <td>
-                <input type="text" class="form-control" ng-model="NotaCompraModel.DataInicial" placeholder="Data Inicial" />
+                <input id="DataInicial" type="text" class="form-control" ng-model="notaCompraViewModel.DataInicial" placeholder="Data Inicial" />
             </td>
         </tr>
         <tr>
@@ -25,7 +28,7 @@
 
             </td>
             <td>
-                <input type="text" class="form-control" ng-model="NotaCompraModel.DataFinal" placeholder="Data Final" />
+                <input id="DataFinal" type="text" class="form-control" ng-model="notaCompraViewModel.DataFinal" placeholder="Data Final" />
             </td>
         </tr>
         <tr>
@@ -33,7 +36,7 @@
                 &nbsp;&nbsp;&nbsp;&nbsp;
             </td>
             <td>
-                <button type="button" ng-click="filtrar();" class="btn btn-primary">Save</button>
+                <button type="button" ng-click="filtrar();" class="btn btn-primary">Filtrar</button>
             </td>
         </tr>
 
@@ -70,12 +73,12 @@
                         <td>{{Nota.ValorTotal}}</td>
                         <td>{{Nota.Status}}</td>
                         <td>
-                            <button ng-click='visto(Nota.Id);' data-toggle='tooltip' title='{{Visto}}' class='btn btn-xs btn-primary'>
+                            <button ng-disabled="Nota.TipoOperacao != 1" ng-click='visto(Nota.Id);' data-toggle='tooltip' title='{{Visto}}' class='btn btn-xs btn-primary'>
                                 <i class='glyphicon glyphicon-ok' style='color:white;'></i>
                             </button>
                         </td>
                         <td>
-                            <button ng-click='aprovacao();' data-toggle='tooltip' title='{{Aprovacao}}' class='btn btn-xs btn btn-xs btn-success'>
+                            <button ng-disabled="Nota.TipoOperacao != 2" ng-click='aprovacao(Nota.Id);' data-toggle='tooltip' title='{{Aprovacao}}' class='btn btn-xs btn btn-xs btn-success'>
                                 <i class='glyphicon glyphicon-ok' style='color:white;'></i>
                             </button>
                         </td>
@@ -90,10 +93,6 @@
 
         </div>
     </div>
-    @*<div class="col-sm-10">
-            <button type="button" id="AddRows" ng-click="ShowRow($event);" class="btn btn-primary">Add Bill</button>
-            <button type="button" ng-click="AddNew();" class="btn btn-primary">Save</button>
-        </div>*@
 </div>
 
 <hr />

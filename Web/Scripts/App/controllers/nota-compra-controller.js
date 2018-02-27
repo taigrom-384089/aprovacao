@@ -33,13 +33,22 @@ angular.module('Module.NotaCompra', ['ngRoute'])
          ValorFrete: '',
          ValorTotal: '',
          Status: '',
-         DataInicial: '',
-         DataFinal: ''
+         DataInicial: null,
+         DataFinal: null
      };
 
 
     $scope.filtrar = function () {
-        
+        $rotasService.notacompra.listar.get({ dataInicial: $scope.notaCompraViewModel.DataInicial, dataFinal: $scope.notaCompraViewModel.DataFinal })
+        .then(function (retorno) {
+
+            $scope.NotasCompra = null;
+            $scope.NotasCompra = retorno.data;
+
+        }, function (retorno) {
+            var serverError = new $erroServidor(retorno.data, $scope);
+            serverError.exibirMensagensDeErro();
+        });
     };
 
     $scope.visto = function (idNotaCompra) {
@@ -56,8 +65,11 @@ angular.module('Module.NotaCompra', ['ngRoute'])
 
                         $rotasService.notacompra.visto.get({ idNotaCompra: idNotaCompra })
                         .then(function (retorno) {
-                            if (retorno.status == 200){
-                                window.location = '/';
+                            if (retorno.status == 200) {
+                                $components.toast(i18n.textogeral.Atencao, i18n.textogeral.VistoSucesso, 1);
+                                setTimeout(function () {
+                                    window.location = '/';
+                                }, 50)
                             }
 
                         }, function (retorno) {
@@ -79,8 +91,44 @@ angular.module('Module.NotaCompra', ['ngRoute'])
         $components.dialog(optionsDefault);
     };
 
-    $scope.aprovacao = function () {
-        alert('aprovacao')
+    $scope.aprovacao = function (idNotaCompra) {
+        var optionsDefault = {
+            title: i18n.textogeral.Atencao,
+            message: i18n.textogeral.DesejaEfetuarVisto,
+            size: 'small',
+            buttons: {
+                success: {
+                    label: i18n.textogeral.Sim,
+                    className: "btn btn-primary",
+                    callback: function () {
+
+                        $rotasService.notacompra.aprovacao.get({ idNotaCompra: idNotaCompra })
+                        .then(function (retorno) {
+                            if (retorno.status == 200) {
+                                $components.toast(i18n.textogeral.Atencao, i18n.textogeral.AprovacaoSucesso, 1);
+                                setTimeout(function () {
+                                    window.location = '/';
+                                }, 50)
+                                
+                            }
+
+                        }, function (retorno) {
+                            var serverError = new $erroServidor(retorno.data, $scope);
+                            serverError.exibirMensagensDeErro();
+                        });
+                    }
+                },
+                danger: {
+                    label: i18n.textogeral.Nao,
+                    className: "btn btn-danger",
+                    callback: function () {
+
+                    }
+                }
+            }
+        };
+
+        $components.dialog(optionsDefault);
     };
 });
 

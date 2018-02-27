@@ -25,11 +25,13 @@ namespace Web.ViewModels
 
         public string Status { get; set; }
 
+        public int TipoOperacao { get; set; }
+
         public bool HabilitaVisto { get; set; }
 
         public bool HabilitaAprovacao { get; set; }
 
-        public NotaCompraViewModel ToViewModel(NotaCompra model)
+        public NotaCompraViewModel ToViewModel(NotaCompra model, int tipoOperacao)
         {
             return new NotaCompraViewModel()
             {
@@ -39,7 +41,8 @@ namespace Web.ViewModels
                 ValorDesconto = model.ValorDesconto.ToString("n2"),
                 ValorFrete = model.ValorFrete.ToString("n2"),
                 ValorTotal = model.ValorTotal.ToString("n2"),
-                Status = model.Status == (byte)TipoStatus.Pendente ? "Pendente" : "Aprovada"
+                Status = model.Status == (byte)TipoStatus.Pendente ? "Pendente" : "Aprovada",
+                TipoOperacao = tipoOperacao
             };
         }
     }

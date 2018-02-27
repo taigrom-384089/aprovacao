@@ -31,10 +31,11 @@ namespace Web.Controllers
             return PartialView("_Editar");
         }
 
-        public JsonResult Listar()
+        public JsonResult Listar(string dataInicial, string dataFinal)
         {
-            var notasCompra = Repositorio.NotasCompra.BuscarTodos();
-            var notasCompraViewModel = notasCompra.Select(x => new NotaCompraViewModel().ToViewModel(x));
+            var usuarioLogado = Sessao.Ativa.Usuario;
+            var notasCompra = Repositorio.NotasCompra.Filtrar(dataInicial, dataFinal, usuarioLogado);
+            var notasCompraViewModel = notasCompra.Select(x => new NotaCompraViewModel().ToViewModel(x, usuarioLogado.Papel));
 
             return Json(notasCompraViewModel, JsonRequestBehavior.AllowGet);
         }
@@ -51,7 +52,8 @@ namespace Web.Controllers
                     var notaCompra = Repositorio.NotasCompra.BuscarPorID(idNotaCompra);
                     var configuracao = Repositorio.Configuracoes.BuscarPorFaixa(usuarioLogado.ValorMinVistoAprovacao, usuarioLogado.ValorMaxVistoAprovacao);
 
-                    notaCompra.ValidarUsuario(usuarioLogado);
+                    notaCompra.ValidarUsuario(usuarioLogado.Id);
+                    notaCompra.ValidarLimiteVisto(configuracao);
                     notaCompra.AdicionaHistorioAprovacao(new HistoricoAprovacao()
                     { 
                         Data = DateTime.Now, 
@@ -60,7 +62,10 @@ namespace Web.Controllers
                         Usuario = usuarioLogado
                     });
 
-                    notaCompra.Status = (byte)TipoStatus.Pendente;
+                    if (notaCompra.ValidarVistoAprovacao(configuracao))
+                        notaCompra.Status = (byte)TipoStatus.Aprovada;
+                    else
+                        notaCompra.Status = (byte)TipoStatus.Pendente;
 
                     Repositorio.NotasCompra.SalvarOuAtualizar(notaCompra);
                     transacao.Commit();
@@ -86,7 +91,8 @@ namespace Web.Controllers
                     var notaCompra = Repositorio.NotasCompra.BuscarPorID(idNotaCompra);
                     var configuracao = Repositorio.Configuracoes.BuscarPorFaixa(usuarioLogado.ValorMinVistoAprovacao, usuarioLogado.ValorMaxVistoAprovacao);
 
-                    notaCompra.ValidarUsuario(usuarioLogado);
+                    notaCompra.ValidarUsuario(usuarioLogado.Id);
+                    notaCompra.ValidarLimiteAprovacao(configuracao);
                     notaCompra.ValidarVistos(configuracao);
                     notaCompra.AdicionaHistorioAprovacao(new HistoricoAprovacao()
                     {
@@ -98,7 +104,8 @@ namespace Web.Controllers
 
                     if (notaCompra.ValidarVistoAprovacao(configuracao))
                         notaCompra.Status = (byte)TipoStatus.Aprovada;
-                    else notaCompra.Status = (byte)TipoStatus.Pendente;
+                    else
+                        notaCompra.Status = (byte)TipoStatus.Pendente;
 
                     Repositorio.NotasCompra.SalvarOuAtualizar(notaCompra);
                     transacao.Commit();

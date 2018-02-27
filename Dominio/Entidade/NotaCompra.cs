@@ -37,11 +37,11 @@ namespace Dominio.Entidade
             } 
         }
 
-        public virtual void ValidarUsuario(Usuario usuario)
+        public virtual void ValidarUsuario(int idUsuario)
         {
-            var historios = Historicos.Where(x => x.Usuario.Id == usuario.Id && x.NotaCompra.Id == this.Id);
+            var historios = Historicos.Where(x => x.Usuario.Id == idUsuario && x.NotaCompra.Id == this.Id);
             if (historios.Count() > 0)
-                throw new BusinessException(MensagensValidacao.Usuario_JaAprovouNotaCompra);
+                throw new BusinessException(MensagensValidacao.Usuario_NFComVistoOuAprovacao);
         }
 
         public virtual void AdicionaHistorioAprovacao(HistoricoAprovacao historicoAprovacao)
@@ -63,6 +63,24 @@ namespace Dominio.Entidade
             if (vistos.Count() == configuracao.Visto && aprovacoes.Count() == configuracao.Aprovacao)
                 return true;
             return false;
+        }
+
+        public virtual void ValidarLimiteVisto(Configuracao configuracao)
+        {
+            var historioAprovacao = Repositorio.Historicos.BuscarTodos();
+            var vistos = historioAprovacao.Where(x => x.NotaCompra.Id == this.Id && x.Operacao == (byte)TipoOperacao.Visto);
+
+            if (vistos.Count() == configuracao.Visto)
+                throw new BusinessException(MensagensValidacao.Usuario_LimiteDeVistoAtigidos);
+        }
+
+        public virtual void ValidarLimiteAprovacao(Configuracao configuracao)
+        {
+            var historioAprovacao = Repositorio.Historicos.BuscarTodos();
+            var aprovacoes = historioAprovacao.Where(x => x.NotaCompra.Id == this.Id && x.Operacao == (byte)TipoOperacao.Aprovacao);
+
+            if (aprovacoes.Count() == configuracao.Aprovacao)
+                throw new BusinessException(MensagensValidacao.Usuario_LimiteDeAprovacaoAtigidos);
         }
     }
 }

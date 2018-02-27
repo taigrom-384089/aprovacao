@@ -70,6 +70,15 @@ namespace Comum.Recursos {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Aprovação realizada com sucesso!.
+        /// </summary>
+        public static string AprovacaoSucesso {
+            get {
+                return ResourceManager.GetString("AprovacaoSucesso", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Atenção.
         /// </summary>
         public static string Atencao {
@@ -192,6 +201,15 @@ namespace Comum.Recursos {
         public static string Visto {
             get {
                 return ResourceManager.GetString("Visto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Visto realizado com sucesso!.
+        /// </summary>
+        public static string VistoSucesso {
+            get {
+                return ResourceManager.GetString("VistoSucesso", resourceCulture);
             }
         }
     }

@@ -1,4 +1,13 @@
-﻿
+﻿<script>
+    $(function () {
+        $('#pw').keyup(function () {
+            if (event.keyCode === 13) {
+                $('#entrar').click();
+            }
+        })
+    })
+
+</script>
 
 <div style="width: 50%; margin: 50px auto;" ng-controller="LoginCtrl">
 
@@ -17,7 +26,7 @@
 
             </td>
             <td>
-                <input type="password" class="form-control" ng-model="usuarioViewModel.Senha" placeholder="Senha" />
+                <input id="pw" type="password" class="form-control" ng-model="usuarioViewModel.Senha" placeholder="Senha" />
             </td>
         </tr>
         <tr>
@@ -25,7 +34,7 @@
                 &nbsp;&nbsp;&nbsp;&nbsp;
             </td>
             <td>
-                <button type="button" ng-click="entrar();" class="btn btn-primary">Entrar</button>
+                <button id="entrar" type="button" ng-click="entrar();" class="btn btn-primary">Entrar</button>
             </td>
         </tr>
 

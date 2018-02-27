@@ -52,17 +52,18 @@ namespace Web.Controllers
             }
         }
 
-        public ActionResult Sair()
+        public HttpResponseMessage Sair()
         {
             FormsAuthentication.SignOut();
             Session.Clear();
-            return RedirectToAction("Index");
+            return new HttpResponseMessage(HttpStatusCode.OK);
         }
 
         [AllowAnonymous]
         public ActionResult Timeout()
         {
             Session.Clear();
+            Session.Abandon();
             FormsAuthentication.SignOut();
 
             if (Request.IsAjaxRequest())

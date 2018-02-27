@@ -120,6 +120,9 @@
   <data name="Aprovacao" xml:space="preserve">
     <value>Aprovação</value>
   </data>
+  <data name="AprovacaoSucesso" xml:space="preserve">
+    <value>Aprovação realizada com sucesso!</value>
+  </data>
   <data name="Atencao" xml:space="preserve">
     <value>Atenção</value>
   </data>
@@ -161,5 +164,8 @@
   </data>
   <data name="Visto" xml:space="preserve">
     <value>Visto</value>
+  </data>
+  <data name="VistoSucesso" xml:space="preserve">
+    <value>Visto realizado com sucesso!</value>
   </data>
 </root>

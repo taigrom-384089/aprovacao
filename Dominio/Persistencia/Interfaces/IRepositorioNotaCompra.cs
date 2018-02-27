@@ -9,5 +9,6 @@ namespace Dominio.Persistencia.Interfaces
 {
     public interface IRepositorioNotaCompra : IRepositorioBase<NotaCompra>
     {
+        IEnumerable<NotaCompra> Filtrar(string dataInicial, string dataFinal, Usuario usuario);
     }
 }

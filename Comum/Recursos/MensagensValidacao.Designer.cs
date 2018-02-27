@@ -79,11 +79,38 @@ namespace Comum.Recursos {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Limite de aprovações foi atingido..
+        /// </summary>
+        public static string Usuario_LimiteDeAprovacaoAtigidos {
+            get {
+                return ResourceManager.GetString("Usuario_LimiteDeAprovacaoAtigidos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Limite de vistos foi atingido..
+        /// </summary>
+        public static string Usuario_LimiteDeVistoAtigidos {
+            get {
+                return ResourceManager.GetString("Usuario_LimiteDeVistoAtigidos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Número de vistos necessários para aprovação não foi atingido..
         /// </summary>
         public static string Usuario_LimiteDeVistosNaoAtigidos {
             get {
                 return ResourceManager.GetString("Usuario_LimiteDeVistosNaoAtigidos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Você já realizou visto ou aprovação desta nota..
+        /// </summary>
+        public static string Usuario_NFComVistoOuAprovacao {
+            get {
+                return ResourceManager.GetString("Usuario_NFComVistoOuAprovacao", resourceCulture);
             }
         }
     }

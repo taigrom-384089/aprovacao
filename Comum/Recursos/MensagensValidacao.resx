@@ -123,7 +123,16 @@
   <data name="Usuario_JaAprovouNotaCompra" xml:space="preserve">
     <value>Usuário já aprovou está nota de compra.</value>
   </data>
+  <data name="Usuario_LimiteDeAprovacaoAtigidos" xml:space="preserve">
+    <value>Limite de aprovações foi atingido.</value>
+  </data>
+  <data name="Usuario_LimiteDeVistoAtigidos" xml:space="preserve">
+    <value>Limite de vistos foi atingido.</value>
+  </data>
   <data name="Usuario_LimiteDeVistosNaoAtigidos" xml:space="preserve">
     <value>Número de vistos necessários para aprovação não foi atingido.</value>
+  </data>
+  <data name="Usuario_NFComVistoOuAprovacao" xml:space="preserve">
+    <value>Você já realizou visto ou aprovação desta nota.</value>
   </data>
 </root>

@@ -9,7 +9,7 @@ App.factory("$erroServidor", function ($rotasService, $sce) {
         }
 
         this.exibirMensagensDeErro = function () {
-            $components.toast('Atenção!',this.data.Mensagem, 0);
+            $components.toast(i18n.textogeral.Atencao,this.data.Mensagem, 0);
         }
     };
 });

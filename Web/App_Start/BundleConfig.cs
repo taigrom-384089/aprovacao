@@ -22,7 +22,8 @@ namespace Web
                        "~/Scripts/bootstrap.js",
                        "~/Scripts/components.js",
                        "~/Scripts/bootstrap-toastr/toastr.js",
-                       "~/Scripts/bootbox/bootbox.js"
+                       "~/Scripts/bootbox/bootbox.js",
+                       "~/Scripts/jquery-maskedinput/jquery-maskedinput.js"
                         ));
 
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(
