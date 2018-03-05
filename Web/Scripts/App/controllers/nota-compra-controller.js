@@ -69,7 +69,7 @@ angular.module('Module.NotaCompra', ['ngRoute'])
                                 $components.toast(i18n.textogeral.Atencao, i18n.textogeral.VistoSucesso, 1);
                                 setTimeout(function () {
                                     window.location = '/';
-                                }, 50)
+                                }, 800)
                             }
 
                         }, function (retorno) {
@@ -108,7 +108,7 @@ angular.module('Module.NotaCompra', ['ngRoute'])
                                 $components.toast(i18n.textogeral.Atencao, i18n.textogeral.AprovacaoSucesso, 1);
                                 setTimeout(function () {
                                     window.location = '/';
-                                }, 50)
+                                }, 800)
                                 
                             }
 
