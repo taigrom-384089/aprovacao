@@ -36,7 +36,8 @@ namespace Dominio.Entidade
                 return _historicos;
             } 
         }
-
+        
+        //Usuários do sistema poderão registrar um único visto ou aprovação por nota de compra
         public virtual void ValidarUsuario(int idUsuario)
         {
             var historios = Historicos.Where(x => x.Usuario.Id == idUsuario && x.NotaCompra.Id == this.Id);
@@ -48,14 +49,16 @@ namespace Dominio.Entidade
         {
             _historicos.Add(historicoAprovacao);
         }
-
+        
+        //As aprovações somente deverão ocorrer quando a quantidade de vistos necessários for atingida
         public virtual void ValidarVistos(Configuracao configuracao)
         {
             var vistos = Historicos.Where(x => x.NotaCompra.Id == this.Id && x.Operacao == (byte)TipoOperacao.Visto);
             if (vistos.Count() != configuracao.Visto)
                 throw new BusinessException(MensagensValidacao.Usuario_LimiteDeVistosNaoAtigidos);
         }
-
+        
+        //A nota de compra será aprovada quando atingir a quantidade de vistos e aprovações necessárias
         public virtual bool ValidarVistoAprovacao(Configuracao configuracao)
         {
             var vistos = Historicos.Where(x => x.NotaCompra.Id == this.Id && x.Operacao == (byte)TipoOperacao.Visto);
