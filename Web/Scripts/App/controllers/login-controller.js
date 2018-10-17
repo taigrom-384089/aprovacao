@@ -1,6 +1,4 @@
-﻿
-//Add Employee Controller
-angular.module('Module.Login', ['ngRoute'])
+﻿angular.module('Module.Login', ['ngRoute'])
 .controller('LoginCtrl', function ($scope, $http, $rotasService, $erroServidor) {
 
     $scope.usuarioViewModel =
