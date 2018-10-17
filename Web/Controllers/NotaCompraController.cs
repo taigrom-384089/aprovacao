@@ -102,6 +102,7 @@ namespace Web.Controllers
                         Usuario = usuarioLogado
                     });
 
+                    //A aprovação da nota irá mudar o status da nota de pendente para aprovada.
                     if (notaCompra.ValidarVistoAprovacao(configuracao))
                         notaCompra.Status = (byte)TipoStatus.Aprovada;
                     else
