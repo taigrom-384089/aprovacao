@@ -30,12 +30,12 @@ namespace Web.Controllers
         {
             return PartialView("_Editar");
         }
-
+        
         public JsonResult Listar(string dataInicial, string dataFinal)
         {
             var usuarioLogado = Sessao.Ativa.Usuario;
             var notasCompra = usuarioLogado.Login.Equals("user0") ? Repositorio.NotasCompra.BuscarTodos() : Repositorio.NotasCompra.Filtrar(dataInicial, dataFinal, usuarioLogado);
-            var notasCompraViewModel = notasCompra.Select(x => new NotaCompraViewModel().ToViewModel(x, usuarioLogado.Papel));
+            var notasCompraViewModel = notasCompra.Select(x => new NotaCompraViewModel().ToViewModel(x, usuarioLogado));
 
             return Json(notasCompraViewModel, JsonRequestBehavior.AllowGet);
         }

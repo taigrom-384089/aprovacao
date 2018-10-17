@@ -12,7 +12,6 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
 using Comum.Exceptions;
-using Web.Models;
 using System.Configuration;
 using Dominio.Integracao;
 using System.Reflection;

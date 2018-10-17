@@ -72,12 +72,12 @@
                         <td>{{Nota.ValorFrete}}</td>
                         <td>{{Nota.ValorTotal}}</td>
                         <td>{{Nota.Status}}</td>
-                        <td>
+                        <td ng-disabled="Nota.TipoOperacao == 0">
                             <button ng-disabled="Nota.TipoOperacao != 1" ng-click='visto(Nota.Id);' data-toggle='tooltip' title='{{Visto}}' class='btn btn-xs btn-primary'>
                                 <i class='glyphicon glyphicon-ok' style='color:white;'></i>
                             </button>
                         </td>
-                        <td>
+                        <td ng-disabled="Nota.TipoOperacao == 0">
                             <button ng-disabled="Nota.TipoOperacao != 2" ng-click='aprovacao(Nota.Id);' data-toggle='tooltip' title='{{Aprovacao}}' class='btn btn-xs btn btn-xs btn-success'>
                                 <i class='glyphicon glyphicon-ok' style='color:white;'></i>
                             </button>

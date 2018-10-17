@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using Web.Models;
 using Comum.Util;
 using Dominio.Entidade;
 using Dominio.Persistencia.Entidade;
@@ -31,7 +30,7 @@ namespace Web.ViewModels
 
         public bool HabilitaAprovacao { get; set; }
 
-        public NotaCompraViewModel ToViewModel(NotaCompra model, int tipoOperacao)
+        public NotaCompraViewModel ToViewModel(NotaCompra model, Usuario usuarioLogado)
         {
             return new NotaCompraViewModel()
             {
@@ -42,7 +41,7 @@ namespace Web.ViewModels
                 ValorFrete = model.ValorFrete.ToString("n2"),
                 ValorTotal = model.ValorTotal.ToString("n2"),
                 Status = model.Status == (byte)TipoStatus.Pendente ? "Pendente" : "Aprovada",
-                TipoOperacao = tipoOperacao
+                TipoOperacao = usuarioLogado.Login.Equals("user0") ? 0 : usuarioLogado.Papel
             };
         }
     }
