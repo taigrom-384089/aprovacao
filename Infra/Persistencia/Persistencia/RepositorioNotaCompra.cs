@@ -1,5 +1,4 @@
 ﻿using Dominio.Entidade;
-using Dominio.Persistencia.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +9,7 @@ using System.Collections.ObjectModel;
 using NHibernate;
 using Infra.NHibernate;
 using NHibernate.Criterion;
+using Infra.Persistencia.Interfaces;
 
 namespace Infra.Persistencia.Persistencia
 {

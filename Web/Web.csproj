@@ -358,9 +358,9 @@
       <Project>{45b658b9-6917-4c9b-8f6d-e41fcc4c0428}</Project>
       <Name>Dominio</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Infra\Infra.csproj">
-      <Project>{3918beea-2164-4994-b4c2-e8e50ecc039d}</Project>
-      <Name>Infra</Name>
+    <ProjectReference Include="..\IoC\IoC.csproj">
+      <Project>{bab1a91f-2787-4cae-a92d-5ee7d8fb3d3a}</Project>
+      <Name>IoC</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

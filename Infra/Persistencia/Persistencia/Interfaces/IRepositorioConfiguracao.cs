@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Dominio.Persistencia.Interfaces
+namespace Infra.Persistencia.Interfaces
 {
     public interface IRepositorioConfiguracao : IRepositorioBase<Configuracao>
     {

@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Dominio.Persistencia.Interfaces
+namespace Dominio.Integracao.Interfaces
 {
-    public interface IRepositorioNotaCompra : IRepositorioBase<NotaCompra>
+    public interface IServicoNotaCompra
     {
         IEnumerable<NotaCompra> Filtrar(string dataInicial, string dataFinal, Usuario usuario);
     }

@@ -1,7 +1,7 @@
 ﻿using Dominio.InjecaoDependencia.Entidade;
 using Dominio.Persistencia.Interfaces;
 
-namespace Dominio.Persistencia.Entidade
+namespace Infra.Persistencia.Entidade
 {
     public class Repositorio 
     {
