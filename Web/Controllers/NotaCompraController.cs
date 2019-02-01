@@ -18,11 +18,14 @@ using Comum.Util;
 
 namespace Web.Controllers
 {
-    [Autorizacao]
+    //[Autorizacao]
     public class NotaCompraController : Controller
     {
         public ActionResult Index()
         {
+
+            Repositorio.NotasCompra.Listar();
+
             return View();
         }
 

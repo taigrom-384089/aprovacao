@@ -82,6 +82,7 @@
   <ItemGroup>
     <Compile Include="Entidade\HistoricoAprovacao.cs" />
     <Compile Include="Entidade\Configuracao.cs" />
+    <Compile Include="Entidade\ItemNota.cs" />
     <Compile Include="Entidade\NotaCompra.cs" />
     <Compile Include="Entidade\Usuario.cs" />
     <Compile Include="Entidade\IEntidade.cs" />

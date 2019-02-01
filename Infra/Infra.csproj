@@ -87,6 +87,7 @@
     <Compile Include="NHibernate\SessionManager.cs" />
     <Compile Include="Persistencia\Mapeamento\HistoricoAprovacaoMap.cs" />
     <Compile Include="Persistencia\Mapeamento\ConfiguracaoMap.cs" />
+    <Compile Include="Persistencia\Mapeamento\ItemNotaMapa.cs" />
     <Compile Include="Persistencia\Mapeamento\NotaCompraMap.cs" />
     <Compile Include="Persistencia\Mapeamento\UsuarioMap.cs" />
     <Compile Include="Persistencia\Persistencia\RepositorioHistoricoAprovacao.cs" />

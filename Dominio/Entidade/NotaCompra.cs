@@ -15,6 +15,8 @@ namespace Dominio.Entidade
     {
         protected IList<HistoricoAprovacao> _historicos;
 
+        protected IList<ItemNota> _itensNota;
+
         public virtual Int32 Id { get; set; }
 
         public virtual DateTime DataEmissao { get; set; }
@@ -36,7 +38,17 @@ namespace Dominio.Entidade
                 return _historicos;
             } 
         }
-        
+
+        public virtual IEnumerable<ItemNota> ItensNota
+        {
+            get
+            {
+                _itensNota.Add(new ItemNota() { NotaCompra = this });
+
+                return _itensNota;
+            }
+        }
+
         //Usuários do sistema poderão registrar um único visto ou aprovação por nota de compra
         public virtual void ValidarUsuario(int idUsuario)
         {
@@ -49,7 +61,7 @@ namespace Dominio.Entidade
         {
             _historicos.Add(historicoAprovacao);
         }
-        
+
         //As aprovações somente deverão ocorrer quando a quantidade de vistos necessários for atingida
         public virtual void ValidarVistos(Configuracao configuracao)
         {
