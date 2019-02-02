@@ -16,7 +16,8 @@ namespace Dominio.Entidade
 
         public virtual int Quantidade { get; set; }
 
-        public virtual NotaCompra NotaCompra { get; set; }
-        
+        public virtual NotaCompra NotaCompraPai { get; set; }
+
+        public virtual NotaCompra NotaCompraAgregada { get; set; }
     }
 }

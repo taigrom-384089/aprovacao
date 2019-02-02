@@ -56,11 +56,11 @@ namespace Infra.Persistencia.Persistencia
 
         public IEnumerable<NotaCompra> Listar()
         {
-            IQueryOver<NotaCompra, NotaCompra> query = Session.QueryOver<NotaCompra>();
-
+            var query = Session.QueryOver<NotaCompra>();
+                
             var result = query.List();
 
-            return result;
+            return null;
         }
     }
 }

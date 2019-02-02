@@ -13,6 +13,8 @@ namespace Dominio.Entidade
 {
     public class NotaCompra 
     {
+        protected IList<ItemNota> _notasAgregadas;
+
         protected IList<HistoricoAprovacao> _historicos;
 
         protected IList<ItemNota> _itensNota;
@@ -39,13 +41,11 @@ namespace Dominio.Entidade
             } 
         }
 
-        public virtual IEnumerable<ItemNota> ItensNota
+        public virtual IEnumerable<ItemNota> NotasAgregadas
         {
             get
             {
-                _itensNota.Add(new ItemNota() { NotaCompra = this });
-
-                return _itensNota;
+                return _notasAgregadas;
             }
         }
 

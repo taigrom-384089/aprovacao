@@ -1,9 +1,5 @@
 ﻿using Dominio.Entidade;
 using FluentNHibernate.Mapping;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Infra.Persistencia.Mapeamento
@@ -21,7 +17,7 @@ namespace Infra.Persistencia.Mapeamento
             Map(x => x.ValorTotal).Column("VALOR_TOTAL").Length(18).Not.Nullable();
             Map(x => x.Status).Column("STATUS").Not.Nullable();
             HasMany(x => x.Historicos).Access.CamelCaseField(Prefix.Underscore).Cascade.All().Inverse().KeyColumn("ID_NOTA_COMPRA");
-            HasMany(x => x.ItensNota).Access.CamelCaseField(Prefix.Underscore).Cascade.All().Inverse().KeyColumn("ID_NOTA_COMPRA");
+            HasMany(x => x.NotasAgregadas).Access.CamelCaseField(Prefix.Underscore).Cascade.All().KeyColumn("ID_NOTA_COMPRA");
         }
     }
 }

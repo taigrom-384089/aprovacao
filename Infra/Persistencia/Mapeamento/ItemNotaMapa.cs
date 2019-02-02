@@ -16,7 +16,8 @@ namespace Infra.Persistencia.Mapeamento
             Id(x => x.Id).Column("ID_ITEM_NOTA").GeneratedBy.Identity();
             Map(x => x.Descricao).Column("DESCRICAO").Not.Nullable();
             Map(x => x.Quantidade).Column("QUANTIDADE").Not.Nullable();
-            References(x => x.NotaCompra).Column("ID_NOTA_COMPRA");
+            References(x => x.NotaCompraPai).Column("ID_NOTA_COMPRA");
+            References(x => x.NotaCompraAgregada).Column("ID_NOTA_COMPRA_AGREGADA");
         }
     }
 }
